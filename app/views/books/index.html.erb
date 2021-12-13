@@ -1,25 +1,13 @@
 <h1>
-  <b>Books</b>
+  ようこそ<b>Bookers</b>へ！
 </h1>
 
-<h1>投稿一覧</h1>
-<% @books.each do |book| %>
-  <p>Title</p>
-  <span><%= book.title %></span>
-  <p>Body</p>
-  <span><%= book.body %></span>
-  <%= link_to "Show", "/show/#{book.id}" %>
-  <%= link_to "Edit", "/edit/#{book.id}" %>
-  <%= link_to "Destroy", books_index_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
-<% end %>
 
-<h2>New book</h2>
+<p>
+  <strong>Bookers</strong> では、さまざまな書籍に関するあなたの意見や
+</p>
+<p>
+  印象を共有し交換することができます
+</p>
 
-<%= form_with model:@book, local:true do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-  <h4>Body</h4>
-  <%= f.text_area :body %>
-
-  <%= f.submit 'create book' %>
-<% end %>
+<%= link_to 'start', '/books/new' %>
